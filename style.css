@@ -9,121 +9,124 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #0a0e27;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     padding: 20px;
 }
 
 .container {
-    background: white;
-    padding: 50px 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
+    background: #1a1f3a;
+    padding: 40px 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 420px;
     width: 100%;
 }
 
 h1 {
     text-align: center;
-    color: #667eea;
-    margin-bottom: 10px;
-    font-size: 2.5em;
-    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 .subtitle {
-    text-align: center;
-    color: #888;
-    margin-bottom: 40px;
-    font-size: 0.95em;
+    display: none;
 }
 
 .input-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    color: #555;
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 0.9em;
+    display: none;
 }
 
 input[type="text"] {
     width: 100%;
-    padding: 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    font-size: 16px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 15px;
+    color: #fff;
     transition: all 0.3s ease;
     outline: none;
 }
 
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
 input[type="text"]:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
 }
 
 button {
     width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin-bottom: 25px;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 button:active {
-    transform: translateY(0);
+    transform: scale(0.98);
 }
 
 .result {
-    padding: 20px;
-    background: #f8f9ff;
-    border-radius: 10px;
-    border-left: 4px solid #667eea;
-    min-height: 60px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     word-break: break-all;
+    margin-bottom: 15px;
 }
 
 .result-text {
-    color: #333;
-    font-size: 1.2em;
-    font-weight: 500;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
 .result-placeholder {
-    color: #aaa;
-    font-style: italic;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    font-style: normal;
 }
 
 .copy-btn {
-    margin-top: 15px;
-    background: white;
-    color: #667eea;
-    border: 2px solid #667eea;
-    padding: 10px;
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
     font-size: 14px;
     display: none;
 }
 
 .copy-btn:hover {
-    background: #667eea;
-    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .copy-btn.show {
@@ -132,10 +135,10 @@ button:active {
 
 @media (max-width: 600px) {
     .container {
-        padding: 40px 25px;
+        padding: 30px 20px;
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 1.7em;
     }
 }
