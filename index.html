@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <h1>Reverse Your Text</h1>
+        <h1>🔄 Reverser</h1>
+        <p class="subtitle">Flip your text instantly</p>
         
-        <input type="text" id="userInput" placeholder="Type here...">
-        
-        <button id="reverseBtn">Reverse It</button>
-        
-        <p id="resultDisplay"></p>
+        <div class="input-group">
+            <label for="inputText">Enter your text</label>
+            <input 
+                type="text" 
+                id="inputText" 
+                placeholder="Type something amazing..."
+                autocomplete="off"
+            >
+        </div>
+
+        <button onclick="reverseString()">Reverse It!</button>
+
+        <div class="result">
+            <span id="resultText" class="result-placeholder">Your reversed text will appear here</span>
+        </div>
+
+        <button id="copyBtn" class="copy-btn" onclick="copyToClipboard()">📋 Copy to Clipboard</button>
     </div>
 
     <script src="script.js"></script>
